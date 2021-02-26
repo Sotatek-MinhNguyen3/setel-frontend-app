@@ -1,0 +1,205 @@
+@import "../../styles/color.scss";
+@import "../../styles/device.scss";
+.listOrder {
+  .summary {
+    display: flex;
+    padding: 0 20px;
+    margin-bottom: 5px;
+
+    @include laptop {
+      position: absolute;
+      right: 0;
+      margin-top: 10px;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .summaryItem {
+      display: flex;
+      align-items: center;
+      margin-right: 45px;
+
+      @include laptop {
+        margin-bottom: 20px;
+      }
+
+      img {
+        border-radius: 12px;
+        width: 45px;
+        height: 45px;
+        padding: 12px;
+        margin: 0 auto;
+        margin-right: 8px;
+      }
+
+      .desc {
+        p:first-child {
+          font-weight: 700;
+          font-size: 12px;
+          color: rgb(119, 119, 119);
+          margin-bottom: -2px;
+        }
+
+        p:nth-child(2) {
+          font-size: 20px;
+          font-weight: 700;
+        }
+      }
+    }
+
+    .total {
+      img {
+        background-color: $primary-blue;
+      }
+    }
+
+    .success {
+      img {
+        background-color: $primary-green;
+      }
+    }
+
+    .fail {
+      img {
+        background-color: $primary-yellow;
+      }
+    }
+  }
+
+  .mainContent {
+    display: flex;
+    padding-right: 30%;
+
+    @include laptop {
+      flex-direction: column-reverse;
+      padding-right: 0;
+    }
+
+    .dataTable {
+      padding: 20px 15px;
+      width: 100%;
+      .avatarInTable {
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        overflow: hidden;
+        object-fit: cover;
+        margin-right: 10px;
+      }
+
+      table {
+        th,
+        td {
+          font-weight: 600;
+        }
+
+        th {
+          font-size: 16px;
+        }
+
+        tr {
+          cursor: pointer;
+        }
+      }
+
+      .customerInTable {
+        display: flex;
+        align-items: center;
+
+        p {
+          font-weight: 600;
+        }
+      }
+
+      .status:first-letter {
+        text-transform: capitalize;
+      }
+
+      .delivered {
+        border-color: $primary-green;
+        color: $primary-green;
+        background-color: $secondary-green;
+      }
+
+      .cancelled {
+        border-color: $primary-red;
+        color: $primary-red;
+        background-color: $secondary-red;
+      }
+
+      .actionBtn {
+        color: $primary-green;
+      }
+    }
+
+    .orderDetail {
+      width: 25%;
+      background-color: $light-grey;
+      padding: 20px;
+      border-radius: 8px;
+      position: absolute;
+      right: 0;
+
+      @include laptop {
+        position: relative;
+        margin-left: 20px;
+        width: 50%;
+      }
+
+      .counting {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        font-weight: 600 !important;
+        span {
+          font-size: 60px;
+          margin-right: 8px;
+          color: $primary-red;
+        }
+
+        p:not(:first-child) {
+          padding-bottom: 18px;
+        }
+
+        .pricePerItem {
+          font-size: 18px;
+        }
+      }
+
+      .total {
+        font-weight: 600;
+        display: flex;
+        font-size: 20px;
+        justify-content: space-between;
+      }
+
+      .cancelBtn {
+        width: 100%;
+        font-weight: 600;
+        margin-top: 15px;
+        border-radius: 6px;
+      }
+
+      .paymentBtn {
+        width: 100%;
+        font-weight: 600;
+        margin-top: 25px;
+        border-radius: 6px;
+      }
+
+      .btnEnable {
+        background: $primary-red;
+        color: #fff !important;
+      }
+
+      .btnPaymentEnable {
+        background: $primary-green;
+        color: #fff !important;
+      }
+
+      hr {
+        border-color: rgba(255, 255, 255, 0.486);
+      }
+    }
+  }
+}

@@ -1,0 +1,60 @@
+@import '../../styles/color.scss';
+
+.compHeader {
+    background-color: $primary-green !important;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+
+
+    .leftSide {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        h3 {
+            color: #fff;
+            font-weight: 600;
+            font-size: 13px;
+            margin-left: 5px;
+        }
+
+        .logo {
+            background-color: #fff;
+            border-radius: 50%;
+            padding: 5px;
+        }
+    }
+
+    .rightSide {
+        display: flex;
+        align-items: center;
+
+        p {
+            color: #fff;
+            font-weight: 600;
+            width: 120px;
+            margin-left: 8px;
+            font-size: 14px;
+        }
+
+        .avatar {
+            background-color: rgb(255, 253, 128);
+            border-radius: 50%;
+            padding: 4px;
+        }
+    }
+
+    .userBox {
+
+    }
+
+    .searchInput {
+        width: 30%;
+        margin-left: 50px;
+        .ant-input-wrapper{
+            border-radius: 20px !important;
+            overflow: hidden;
+        }   
+    }
+}

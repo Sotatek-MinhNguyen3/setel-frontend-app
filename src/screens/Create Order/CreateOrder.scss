@@ -1,0 +1,30 @@
+@import "../../styles/color.scss";
+
+.createOrder {
+    padding: 20px 15px;
+
+    h2 {
+        margin-bottom: 40px;
+    }
+
+    .label {
+        font-weight: 600;
+    }
+
+    .inputNumber {
+        width: 200px;
+    }
+
+    .warning {
+        width: 50%;
+        margin-left: 50px;
+    }
+
+    .createBtn {
+        background: $primary-green;
+        color: #fff;
+        border-radius: 8px;
+        font-weight: 600;
+        width: 200px;
+    }
+}
